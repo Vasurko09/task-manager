@@ -17,7 +17,9 @@ SECRET_KEY = 'django-insecure-^_0(u-6@^w_ua@wb34#4s@=w-82a=gzcft99xa93-c$@f=i@xl
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://task-manager-production-8fa4.up.railway.app'
+]
 
 # Application definition
 
