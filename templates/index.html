@@ -4,24 +4,64 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width-device-width, initial-scale-1, maximum-scale-1"/>
         <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
-        <link rel="stylesheet" href="{% static 'css/sytle.css'%}">
+        
         
         <style>
-            #navbarNav{
-                margin-left: 80%;
+            .topnav a.active {
+                margin-top: -25px;
+                
             }
+            @media screen and (max-width: 500px){
+                .topnav a.active{
+                    margin-top:-10px;
+                    
+                      
+                }
+                .topnav a.icon{
+                    
+                    padding-bottom: 30px;
+                }
+                .topnav{
+                    
+                }
+                
+               
+               
+
+            }
+           
+
          
         </style>
 
     </head>
 
-    {% include 'base.html' %}
+    
 
       <br>
       <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'css/test.css' %}">
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <a href="/" class="active">Task-Manager</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                
+                <a href="{% url 'register' %}">Register</a>
+                <a href="{% url 'login' %}">Login</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <script src="{% static 'js/test.js'%}"></script>
+        </div>
         <div class="text-center">
         <br>
-        <h3 >To-Do....A home for yours daily tasks.</h3>
+        <h3 >Task-Manager....A home for yours daily tasks.</h3>
+
+        
         
         <br>
         <a class="btn btn-outline-primary" type="button" href="register">Register</a>
@@ -29,7 +69,7 @@
 
       </div>
       </body>
-      <script></script>
+   
       
     
 </html>

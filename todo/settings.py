@@ -1,7 +1,7 @@
 import os
-
-from pathlib import Path
 import dj_database_url
+from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -17,9 +17,11 @@ SECRET_KEY = 'django-insecure-^_0(u-6@^w_ua@wb34#4s@=w-82a=gzcft99xa93-c$@f=i@xl
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
+
 CSRF_TRUSTED_ORIGINS = [
     'https://task-manager-production-8fa4.up.railway.app'
 ]
+
 
 # Application definition
 
@@ -90,10 +92,14 @@ DATABASES = {
     }
 }
 '''
+
+
+
 DATABASES = {
     'default': dj_database_url.parse('postgresql://postgres:SmqUE7WX6I4CiIYVoK0e@containers-us-west-8.railway.app:7746/railway')
   
 }
+
 
 
 

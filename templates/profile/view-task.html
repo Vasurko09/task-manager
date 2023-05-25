@@ -8,10 +8,35 @@
         <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
         <link rel="stylesheet" href="{% static 'css/sytle.css'%}">
 
+        <style>
+            .btn{
+                margin-right: 10px;
+            }
+            .nav{
+                display: flex;
+            }
+            .text-center{
+                margin-left: 35%;
+            }
+            .nav h4{
+                margin-left: 70px;
+                
+                padding-top: 5px;
+
+                
+            }
+        </style>
+
     </head>
+    <body>
+        
+    
     <br>
- 
-        <h2 class="text-center">my tasks</h2>
+        <div class="nav">
+             <a href="{% url 'dashboard' %}"><h4>Home</h4></a>
+            <h2 class="text-center">My Tasks</h2>
+            
+        </div>
         <hr>
 
         {%for tsk in task%}
@@ -22,16 +47,17 @@
             {{tsk.content}}
             
             <hr>
-            <a href="{% url 'update-task' tsk.id %}">Update</a>
-            <br>
-            <a href="{% url 'delete-task' tsk.id %}">Delete</a>
-
+            <a class="btn btn-primary navbar-btn" href="{% url 'update-task' tsk.id %}">Update</a>
         
+            <a class="btn btn-primary navbar-btn" href="{% url 'delete-task' tsk.id %}">Delete</a>
+
+            <a class="btn btn-primary navbar-btn" href="{% url 'create-task' %}">Add-Task</a>
         </div>
 
         {%endfor%}
 
 
 
-    </div>
+   
+    </body>
 </html>
