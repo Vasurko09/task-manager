@@ -18,9 +18,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://task-manager-production-8fa4.up.railway.app'
-]
+#CSRF_TRUSTED_ORIGINS = [
+ #   'https://task-manager-production-8fa4.up.railway.app'
+#]
 
 
 # Application definition
@@ -96,7 +96,7 @@ DATABASES = {
 
 
 DATABASES = {
-    'default': dj_database_url.parse('postgresql://postgres:SmqUE7WX6I4CiIYVoK0e@containers-us-west-8.railway.app:7746/railway')
+    'default': dj_database_url.parse('postgres://task_manager_ofat_user:0ceQm564WsB04B7j5Hoqy9clasp784y6@dpg-cjb0nc0cfp5c739mpt50-a.oregon-postgres.render.com/task_manager_ofat')
   
 }
 
