@@ -18,9 +18,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-#CSRF_TRUSTED_ORIGINS = [
- #   'https://task-manager-production-8fa4.up.railway.app'
-#]
+CSRF_TRUSTED_ORIGINS = [
+    'https://task-manager-h8lk.onrender.com/'
+]
 
 
 # Application definition
